@@ -1,0 +1,8 @@
+.link {
+    cursor: pointer;
+  }
+  
+  .link:hover {
+    color: rgb(115, 198, 115);
+  }
+  

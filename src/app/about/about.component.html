@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FARM KART - About Us</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      /* Removed background-color to allow class modification */
+      color: rgb(0, 0, 0); /* Text color set to white */
+      
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #00530a; /* White header background */
+      box-shadow: 0 0 10px rgb(231, 231, 231);
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0;
+      color: white; /* White font color for h1 only */
+    }
+
+    main {
+      flex: 1; /* Main content takes up remaining space */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+
+    section {
+      max-width: 700px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color:#000000;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    li:before {
+      content: "•";
+      margin-right: 10px;
+      color: #4CAF50; /* Maintain list item dot color */
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      background-color: #00530a; /* White footer background */
+      box-shadow: 0 0 10px rgba(255, 253, 253, 0.1);
+    }
+
+    .background-change {  /* New class for background styles */
+      background-image: url('./images/background-black.jpg'); /* Initial image */
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out; /* Add transition for smooth effect */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="color: rgb(255, 255, 255);">ABOUT US</h1>
+  </header>
+
+  <main class="background-change">  <section>
+      <h2>Farmkart</h2>
+      </section>
+
+    <section>
+      <ul>
+        <li><h2>1. Introduction</h2>
+
+          <p>Welcome to our online platform for buying and selling farming products. These terms and conditions govern your use of our website and services. By accessing or using our platform, you agree to comply with these terms. Please read them carefully before proceeding.</p>
+          
+          <h2>2. Registration</h2>
+          
+          <p>a. To use certain features of our platform, you may need to register for an account. You agree to provide accurate and complete information during the registration process.</p>
+          
+            <p>b. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.</p>
+          
+          <h2>3. Product Listings</h2>
+          
+          <p>a. Sellers are responsible for accurately describing their products, including providing detailed descriptions, images, prices, and availability information.</p>
+          
+            <p>b. Products listed on our platform must comply with all applicable laws and regulations. We reserve the right to remove any listings that violate our policies.</p>
+          
+          <h2>4. Purchases and Payments</h2>
+          
+          <p>a. By purchasing a product on our platform, you agree to pay the listed price along with any applicable taxes and fees.</p>
+          
+            <p>b. Payments are processed securely through our payment gateway. We do not store your payment information.</p>
+          
+          <h2>5. Shipping and Delivery</h2>
+          
+          <p>a. Sellers are responsible for shipping products to buyers in a timely manner and in accordance with the shipping options selected by the buyer.</p>
+          
+            <p>b. Buyers are responsible for providing accurate shipping information. We are not liable for delays or errors in delivery caused by inaccurate shipping information provided by the buyer.</p>
+          
+          <h2>6. Product Quality and Returns</h2>
+          
+          <p>a. Sellers are responsible for the quality and condition of their products. If you receive a product that is damaged or not as described, you may be eligible for a return or refund.</p>
+          
+            <p>b. Please review the seller's return policy before making a purchase. Sellers may have different return policies for different products.</p>
+          
+          <h2>7. Intellectual Property</h2>
+          
+          <p>a. All content on our platform, including text, images, and logos, is protected by copyright and other intellectual property laws.</p>
+          
+            <p>b. You may not use, reproduce, or distribute any content from our platform without our permission.</p>
+          
+          <h2>8. Privacy</h2>
+          
+          <p>a. We collect and use personal information in accordance with our privacy policy. By using our platform, you consent to the collection and use of your personal information as described in our privacy policy.</p>
+          
+          <h2>9. Limitation of Liability</h2>
+          
+          <p>a. We are not liable for any damages or losses arising from your use of our platform or your reliance on any information provided on our platform.</p>
+          
+            <p>b. Our liability is limited to the extent permitted by law.
+          
+          <h2>10. Governing Law and Jurisdiction</h2>
+          
+          <p>a. These terms and conditions are governed by the laws of [Your Jurisdiction]. Any disputes arising under these terms shall be resolved in the courts of [Your Jurisdiction].</p>
+          
+          <h2>11. Changes to Terms</h2>
+          
+          <p>a. We reserve the right to modify these terms and conditions at any time. Any changes will be effective immediately upon posting on our platform.</p>
+          
+            <p>b. Your continued use of our platform after the posting of changes constitutes acceptance of those changes.</p>
+          
+              <p>If you have any questions about these terms and conditions, please contact us at [Your Contact Information].</p>
+          
+          Thank you for using our platform! </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p style="color: white;">&copy; 2024 FARMKART <br/> Jerome & Saran babu</p>
+  </footer>
+  <script>
+    // Array of background colors
+    const colors = ['#000', '#800080', '#008000'];
+
+    // Current color index (starts at 0)
+    let currentColorIndex = 0;
+
+    // Function to change background color based on index
+    function changeBackground() {
+      currentColorIndex = (currentColorIndex + 1) % colors.length;
+      document.body.style.backgroundColor = colors[currentColorIndex];
+    }
+
+    // Call changeBackground every 2 seconds (2000 milliseconds)
+    setInterval(changeBackground, 1000);
+  </script>
+</body>
+

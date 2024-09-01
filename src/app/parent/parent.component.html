@@ -1,0 +1,10 @@
+<body>
+    <div>
+        <h1>Parent Component</h1>
+        <input [(ngModel)]="parentData" placeholder="Enter data for child">
+        <app-child [childData]="parentData" (childEvent)="handleChildEvent($event)"></app-child>
+        
+      </div>
+      
+</body>
+  

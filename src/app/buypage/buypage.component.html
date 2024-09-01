@@ -1,0 +1,64 @@
+<body style="background-color: rgb(165, 246, 161);">
+  
+    <div id="container">
+      <div id="logo">
+        <img src="../assets/Farmkart1.jpg" alt="Logo" class="logo">
+      </div>
+      <div id="links">
+          <!--<div class="link" routerLink="/main">Home</div>
+          <div class="link" routerLink="/register">Register</div>-->
+          <div class="link" routerLink="/about">About</div>
+          <div>|</div>
+          {{user}}
+          <button (click)="logout()" class="log">Logout</button>
+      </div>
+    </div>
+    
+    <div>
+      <div class="topnav">
+        <a (click)="home()">Home</a>
+        <a (click)="fertilizer()">Fertilizer</a>
+        <!--<a (click)="seed()">Seeds</a>-->
+      </div>
+    </div>
+
+    <form>
+    <!--<form action="insert"  #form = "ngForm" (ngSubmit)="buy(form)" name="f1" autocomplete="off">-->
+    <div class="preview">
+
+      <td><h2>{{buyproduct.name}}</h2></td>
+      <table [border]="2">
+        <tr>
+            <td rowspan="5" ><img src="assets/{{buyproduct.imagepath}}.jpg" style="width: 100%; height: 8cm;" alt="Movie Images"></td>
+        </tr>
+        <tr>
+          <td><h2>Price :</h2></td>
+          <td><h3>{{buyproduct.price}}</h3></td>
+          <td colspan="3"><h2>Quantity :</h2></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h2>Category :</h2></td>
+          <td><h3>{{buyproduct.category}}</h3></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h2>Description :</h2></td>
+          <td><h3>{{buyproduct.description}}</h3></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h2>Offer :</h2></td>
+          <td><h3>{{buyproduct.offer}}%</h3></td>
+        </tr>
+            
+      </table>
+    </div>
+
+    <div class="preview">
+      <p>Username : {{user}}</p>
+      <p>Contact no : </p>
+      <p>Address : <input type="text" ngModel #address="ngModel" id="address" name="address" required></p>
+      <button class="btn" type="submit">Order</button>
+    </div>
+  </form>
+
+
+    

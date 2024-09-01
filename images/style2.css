@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-image: url("./1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  animation: background-fade 5s ease-in-out infinite alternate;
+}
+
+@keyframes background-fade {
+  from { opacity: 1; }
+  to { opacity: 0.8; }
+}
+
+h1, h2, label, th, td, tfoot td { /* Set all text elements to white */
+  color: white;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+h1, h2 {
+  text-align: center;
+  animation: text-pop 1s ease-in-out forwards;
+}
+
+@keyframes text-pop {
+  from { transform: translateY(20px) opacity: 0; }
+  to { transform: translateY(0px) opacity: 1; }
+}
+
+.input-section label {
+  font-weight: bold;
+  margin-right: 10px;
+  animation: label-glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes label-glow {
+  from { color: #f0f0f0; } /* Adjust for a slight off-white glow if needed */
+  to { color: white; }
+}
+
+.input-section input[type="number"], .input-section input[type="date"] {
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  animation: input-grow 0.5s ease-in-out forwards;
+}
+
+@keyframes input-grow {
+  from { width: 50%; }
+  to { width: 100%; }
+}
+
+.input-section input[type="number"]:focus, .input-section input[type="date"]:focus {
+  border: 1px solid #2196f3; /* Blue border on focus */
+}
+
+.input-section button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white; /* Button text already white */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  animation: button-bounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes button-bounce {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-3px); }
+}
+
+.expenses-list {
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+.delete-btn {
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white; /* Button text already white */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  animation: button-pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes button-pulse {
+  from { opacity: 1; }
+  to { opacity: 0.8; }
+}

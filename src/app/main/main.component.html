@@ -1,0 +1,77 @@
+
+<body style="background-color: rgb(165, 246, 161);">
+  
+<div id="container">
+  <div id="logo">
+    <img src="../assets/Farmkart1.jpg" alt="Logo" class="logo">
+  </div>
+  <div id="links">
+      <!--<div class="link" routerLink="/main">Home</div>
+      <div class="link" routerLink="/register">Register</div>-->
+      <div class="link" routerLink="/about">About</div>
+      <div>|</div>
+      {{user}}
+      <button (click)="logout()" class="log">Logout</button>
+  </div>
+</div>
+
+<div>
+  <div class="topnav">
+    <a (click)="home()">Home</a>
+    <a (click)="fertilizer()">Fertilizer</a>
+    <!--<a (click)="seed()">Seeds</a>-->
+  </div>
+</div>
+
+
+
+<div class="product-grid" *ngIf="view">
+  <div *ngFor="let prod of products" class="product-card">
+    <div class="product-image">
+      <img [src]="prod.imagepath" alt="{{ prod.name }}">
+    </div>
+    <div class="product-details">
+      <h2>{{ prod.name }}</h2>
+      <p class="product-price">Price: {{ prod.price }}</p>
+      <button class="btn" (click)="selected(prod)">Buy Now</button>
+
+    </div>
+  </div>
+</div>
+
+<div>
+  <button class="btn" (click)="back()">Back</button>
+</div>
+
+<div *ngIf="!view" class="preview">
+  <h1>{{ selectedProduct.name }}</h1>
+  <table [border]="2">
+    <tr>
+      <td rowspan="10"><img src="assets/{{selectedProduct.imagepath}}.jpg" style="width: 100%; height: 8cm;" alt="Movie Images"></td>
+    </tr>
+    <tr>  
+      <p>Name: {{ selectedProduct.name }}</p>
+    </tr>
+    <tr>
+      <p>Price: {{ selectedProduct.price }} </p>
+    </tr>
+    <tr>
+      <p>Description: {{ selectedProduct.description }} </p>
+    </tr>
+    <tr>
+      <p>Offer: {{ selectedProduct.offer }} </p>
+    </tr>
+    <tr>
+      <p>Stock: {{ selectedProduct.stock }} </p>
+    </tr>
+  </table>
+
+  <!--<app-buypage [buyproduct]="selectedProduct"></app-buypage>-->
+  <button class="btn" (click)="buynow()">Buy Now</button>
+</div>
+
+<div class="box">
+
+</div>
+</body>
+          
